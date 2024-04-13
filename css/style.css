@@ -2357,6 +2357,48 @@ span.email-notes {
   display: inline;
 }
 
+
+.whatsapp-chat {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  left: 20px; /* Adjust as needed */
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.whatsapp-icon-container {
+  background-color: #25d366; /* WhatsApp green color */
+  width: 50px; /* Adjust as needed */
+  height: 50px; /* Adjust as needed */
+  border-radius: 50%; /* To make it circular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.whatsapp-icon-container i {
+  font-size: 24px; /* Adjust as needed */
+  color: white; /* Icon color */
+}
+
+.chat-with-us-btn {
+  background-color: #25d366; /* WhatsApp green color */
+  color: #fff; /* Text color */
+  padding: 10px 20px; /* Adjust padding as needed */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none;
+  display: inline-block;
+}
+
+.chat-with-us-btn span {
+  margin-right: 10px; /* Space between text and icon */
+}
+
+.chat-with-us-btn i {
+  font-size: 18px; /* Adjust as needed */
+}
+
+
+
 /*----------------------------------------
  .End CSS
 ----------------------------------------*/
