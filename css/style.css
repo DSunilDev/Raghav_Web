@@ -233,6 +233,23 @@ div#preloader {
   text-transform: capitalize;
 }
 
+.section-headline h3 {
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 540;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.sl{
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 540;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+
 .section-headline h2::after {
   border: 1px solid #333;
   bottom: -20px;
@@ -841,6 +858,7 @@ div#preloader {
 
 .single-team-member {
   border: 1px solid #ddd;
+  margin-bottom: 12px;
 }
 
 .team-left-text h4 {
@@ -2441,7 +2459,8 @@ span.email-notes {
   margin: 0;
   padding: 15px;
   text-align: center;
-  font-size: 30px;
+  font-size: 20px;
+  font-weight: 600;
   line-height: 24px;
 }
 
