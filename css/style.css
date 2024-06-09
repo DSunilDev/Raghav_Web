@@ -2526,10 +2526,31 @@ span.email-notes {
 
 
 .servl{
-  text-align: left;
+  text-align: center;
   padding-left: 25px;
 }
 
+.servl {
+  text-align: center;
+  padding-left: 25px;
+  list-style-type: none; /* Remove default bullet points */
+}
+
+.servl li {
+  position: relative; /* Position relative for the tick mark positioning */
+  padding-left: 25px; /* Add padding to the left for the tick mark */
+  margin-bottom: 10px; /* Optional: add some space between list items */
+}
+
+.servl li::before {
+  content: '\2713'; /* Unicode character for a check mark */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: green; /* Set the color of the tick mark */
+  font-size: 18px; /* Set the size of the tick mark */
+  line-height: 1.2; /* Adjust line height if necessary */
+}
 
 /*----------------------------------------
  .End CSS
