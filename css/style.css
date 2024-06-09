@@ -2451,20 +2451,17 @@ span.email-notes {
   justify-content: center;
 }
 
-.team-img {
-  position: relative;
-  overflow: hidden; /* Ensure the wave effect doesn't overflow the container */
-}
-
 .team-img img {
   display: block;
   width: 100%;
-  transition: transform 0.5s ease, filter 0.5s ease; /* Add transition for transform and filter */
+  transition: border-color 0.3s ease; /* Add transition for border color */
 }
 
-.team-img:hover img {
-  transform: scale(1.1); /* Enlarge the image on hover */
-  filter: brightness(1.2); /* Lighten the image on hover */
+.team-img img:focus,
+.team-img img:active {
+  outline: none; /* Remove default focus outline */
+  border: 3px solid #ffcc00; /* Add a yellow border when image is clicked */
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.5); /* Add a shadow effect */
 }
 
 .team-img::before {
@@ -2480,7 +2477,7 @@ span.email-notes {
 }
 
 .team-img:hover::before {
-  opacity: 1; /* Show the wave effect on hover */
+  opacity: 0.4; /* Show the wave effect on hover */
 }
 
 .overlay h2 {
@@ -2578,6 +2575,44 @@ span.email-notes {
     padding-left: 10%;
   }
 }
+
+.main-title {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 30px;
+}
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+.service-box {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  width: 200px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.service-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.service-box i {
+  font-size: 36px;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+.service-box h4 {
+  font-size: 20px;
+  color: #333;
+  margin: 0;
+}
+
 /*----------------------------------------
  .End CSS
 ----------------------------------------*/
