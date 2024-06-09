@@ -1,5 +1,4 @@
 /*
-  Theme Name: eBusiness
   Theme URL: https://bootstrapmade.com/ebusiness-bootstrap-corporate-template/
   Author: BootstrapMade.com
   License: https://bootstrapmade.com/license/
@@ -2531,10 +2530,11 @@ span.email-notes {
 }
 
 .servl {
-  text-align: center;
+  text-align: justify;
   padding-left: 25px;
   list-style-type: none; /* Remove default bullet points */
 }
+
 
 .servl li {
   position: relative; /* Position relative for the tick mark positioning */
@@ -2552,6 +2552,32 @@ span.email-notes {
   line-height: 1.2; /* Adjust line height if necessary */
 }
 
+.centered-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+.centered-list li {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.centered-list li i {
+  margin-right: 10px;
+}
+
+@media (min-width: 768px) {
+  .centered-list li {
+    padding-left: 30%;
+  }
+}
+/* Media query for smaller screens */
+@media (max-width: 767px) {
+  .centered-list li {
+    padding-left: 10%;
+  }
+}
 /*----------------------------------------
  .End CSS
 ----------------------------------------*/
