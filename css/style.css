@@ -1809,7 +1809,7 @@ div#preloader {
 }
 
 .footer-icons ul li a {
-  border: 1px solid #444;
+  border: 1px solid #ffffff;
   color: #444;
   display: block;
   font-size: 16px;
@@ -1845,11 +1845,6 @@ div#preloader {
   overflow: hidden;
 }
 
-.popular-tag ul li a:hover, .footer-icons ul li a:hover {
-  background: #3EC1D5;
-  border: 1px solid #3EC1D5;
-  color: #fff;
-}
 
 .popular-tag ul li a {
   border: 1px solid #444;
@@ -2448,27 +2443,45 @@ span.email-notes {
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: rgba(82, 80, 80, 0.42);
+  background: none;
   overflow: hidden;
   width: 100%;
-  height: auto; /* Ensure the overlay height is sufficient to display the text */
+  height: auto;
   display: flex;
-  align-items: flex-end; /* Align the text at the bottom */
-  justify-content: center; /* Center the text horizontally */
+  align-items: flex-end;
+  justify-content: center;
 }
 
 .team-img {
   position: relative;
+  overflow: hidden; /* Ensure the wave effect doesn't overflow the container */
 }
 
 .team-img img {
   display: block;
   width: 100%;
-  transition: 0.5s ease; /* Add transition to the image */
+  transition: transform 0.5s ease, filter 0.5s ease; /* Add transition for transform and filter */
 }
 
 .team-img:hover img {
-  filter: brightness(50%); /* Darken the image on hover */
+  transform: scale(1.1); /* Enlarge the image on hover */
+  filter: brightness(1.2); /* Lighten the image on hover */
+}
+
+.team-img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0) 75%);
+  transition: opacity 0.5s ease;
+  opacity: 0; /* Make the wave effect invisible initially */
+}
+
+.team-img:hover::before {
+  opacity: 1; /* Show the wave effect on hover */
 }
 
 .overlay h2 {
@@ -2479,8 +2492,13 @@ span.email-notes {
   font-size: 20px;
   font-weight: 600;
   line-height: 24px;
-  width: 100%; /* Ensure the text takes the full width */
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  background-color: rgba(82, 80, 80, 0.42); /* Optional: add background to ensure text visibility */
 }
+
+
 /*Client Carousel*/
 .client-logos {
   overflow: hidden;
